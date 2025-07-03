@@ -10,6 +10,7 @@
     <h1>
         <?php 
             print "Olá Mundo! \u{1F30E}";
+            echo "Olá Mundo! \u{1F30E}"
         ?>
     </h1>
     <p>Vamos nos livrar da maldição!</p>
