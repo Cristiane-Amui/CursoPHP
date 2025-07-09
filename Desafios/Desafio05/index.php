@@ -12,7 +12,7 @@
         <h1>Analisador de número real</h1>
         <form action="desafio.php" method="get">
             <label for="numb">Número Real</label>
-            <input type="number" name="numb" id="idnumb" step="0.010">
+            <input type="number" name="numb" id="idnumb" step="0.001">
             <input type="submit" value="Analisar">
         </form>
     </section>
