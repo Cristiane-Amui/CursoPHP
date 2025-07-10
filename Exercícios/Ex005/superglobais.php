@@ -11,6 +11,8 @@
     <main>
         <pre>
             <?php 
+                setcookie("dia-da-semana", "SEGUNDA", time() + 3600); 
+
                 echo "<h1>Superglobal GET</h1>";
                 var_dump($_GET);
 
