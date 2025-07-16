@@ -27,6 +27,7 @@
     <section id="resultado">
         <h2>Estrutura da Divisão</h2>
         <?php 
+        
             $resultado = intdiv($dividendo, $divisor);
             $resto = $dividendo % $divisor;
 
