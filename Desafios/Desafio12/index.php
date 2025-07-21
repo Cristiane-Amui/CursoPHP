@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de tempo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Calculadora de Tempo</h1>
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+            <label for="seg">Qual é o total de segundos?</label>
+            <input type="number" name="seg" id="">
+            <input type="submit" value="Calcular">
+        </form>
+    </main>
+
+    <section>
+        <h2>Totalizando tudo</h2>
+        <?php 
+        $seg = (int) $_POST["seg"] ?? 0;
+        $min = $seg / 60;
+        $hor = $min / 60;
+        $dia = $hor / 24;
+        $sem = $dia / 7;
+
+        echo "Totalizando o valor digitado, <strong>" . number_format($seg, 0, ",", ".") . " segundos </strong>equivalem a um total de: ";
+        echo "<ul><li>" . number_format($sem, 0, ",", ".") . " Semanas</li>";
+        echo "<li>" . number_format($dia, 0, ",", ".") . " Dias</li>";
+        echo "<li>" . number_format($hor, 0, ",", ".") . " Horas</li>";
+        echo "<li>" . number_format($min, 0, ",", ".") . " Minutos</li>";
+        echo "<li>" . number_format($seg, 0, ",", ".") . " Segundos</li></ul>";
+
+        ?>
+    </section>
+</body>
+</html>
