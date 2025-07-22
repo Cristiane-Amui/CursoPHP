@@ -11,7 +11,7 @@
     <section>
         <h1>Analisador de Número Real</h1>
         <?php  
-        $num = $_GET["numb"];
+        $num = (int) $_GET["numb"] ?? 0;
         echo "<p>Analisando o número <strong> ". number_format($num, 3, ",", ".") . "</strong> informado pelo usuário:</p>";
 
         $int = (int) $num;

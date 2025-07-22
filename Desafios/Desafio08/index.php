@@ -8,18 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php 
+        $num = $_GET['num'] ?? '1';
+    ?>
     <main>
         <h1>Informe um número</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="numero">Número</label>
-            <input type="number" name="num" id="idnum" step="0.0001">
+            <input type="number" name="num" id="idnum" step="0.0001" value="<?=$num?>">
             <input type="submit" value="Calcular Raízes">
         </form>
     </main>
     <section>
         <h2>Resultado Final</h2>
         <?php 
-            $num = $_GET["num"];
+            
             $quad = sqrt($num);
             $cub = $num ** (1/3);
 

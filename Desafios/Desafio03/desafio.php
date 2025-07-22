@@ -11,7 +11,7 @@
     <section>
         <h1>Conversor de moedas v1.0</h1>
         <?php 
-            $reais = $_GET["reais"] ?? 0;
+            $reais = (int) $_GET["reais"] ?? 0;
             $dollar = ($reais / 5.17);
 
             // echo "Seus R$ " . number_format($reais, 2, ",", ".") . " equivalem a <strong>US$ " . number_format($dollar, 2, ",", ".") . "</strong><br>"; //maneira tradicional

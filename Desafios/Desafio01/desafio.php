@@ -14,7 +14,7 @@
     <section>
         <h1>Resultado Final</h1>
         <?php 
-            $numero = (int) $_GET["numero"] ?? 0;
+            $numero = (int) $_GET['numero'] ?? 0;
             echo "<br>O número escolhido foi <strong>$numero</strong>";
             $ant = $numero - 1;
             $suc = $numero + 1;

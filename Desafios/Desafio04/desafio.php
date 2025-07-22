@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 03</title>
+    <title>Conversor de moedas Avançado</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section>
-        <h1>Conversor de moedas v1.0</h1>
+        <h1>Conversor de moedas Avançado</h1>
         <?php 
             // Cotação vinda da API do Banco Central
             $inicio = date("m-d-Y", strtotime("-7 days"));
@@ -24,7 +24,7 @@
             $cotacao = $dados["value"][0]["cotacaoCompra"];
 
 
-            $reais = $_GET["reais"] ?? 0;
+            $reais = (int) $_GET["reais"] ?? 0;
 
             $dollar = $reais / $cotacao;
             
