@@ -12,7 +12,7 @@
         <h1>Conversor de moedas Avançado</h1>
         <form action="desafio.php" method="get">
         <label for="reais">Quantos R$ você tem na carteira?</label>
-        <input type="number" name="reais" id="idreais" step="0.01">
+        <input type="number" name="reais" id="idreais" step="0.01" value="<?=$reais?>">
         <input type="submit" value="Converter">
         </form>
     </section>

@@ -21,10 +21,10 @@
 
            
             
-            $cotacao = $dados["value"][0]["cotacaoCompra"];
+            $cotacao = $dados['value'][0]['cotacaoCompra'];
 
 
-            $reais = (int) $_GET["reais"] ?? 0;
+            $reais = (int) $_GET['reais'] ?? 0;
 
             $dollar = $reais / $cotacao;
             
