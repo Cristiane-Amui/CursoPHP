@@ -17,9 +17,9 @@
         <h1>Anatomia de uma Divisão</h1>
         <form action="" method="get">
             <label for="d1">Dividendo</label>
-            <input type="number" name="d1" id="d1" value="<?=$dividendo?>">
+            <input type="number" name="d1" id="d1" value="<?=$dividendo?>" required>
             <label for="d2">Divisor</label>
-            <input type="number" name="d2" id="d2" min="1" value="<?=$divisor?>" step="1">
+            <input type="number" name="d2" id="d2" min="1" value="<?=$divisor?>" step="1" required>
             <input type="submit" value="Analisar">
         </form>
     </main>
