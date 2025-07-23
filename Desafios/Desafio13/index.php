@@ -15,7 +15,7 @@
         <h1>Caixa eletrônico</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <label for="valor">Qual valor você deseja sacar? (R$)*</label>
-            <input type="number" name="valor" id="" step="5" value="<?=$valor?>">
+            <input type="number" name="valor" id="" step="5" value="<?=$valor?>" required>
             <p>*Notas disponíveis: R$100, R$50, R$10 e R$5</p>
             <input type="submit" value="Sacar">
         </form>
