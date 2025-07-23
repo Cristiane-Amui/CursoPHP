@@ -8,17 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php 
+        $preco =  $_GET['preco'] ?? 0;
+        $perc =  $_GET;['percentual'] ?? 0;
+    ?>
     <main>
         <h1>Reajustador de Preços</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="preco">Preço do Produto (R$)</label>
-            <input type="number" name="preco" id="" step="0.001">
-            <label for="percentual">
-                <?php 
-                 $perc = (int) $_GET["percentual"] ?? 0;
-                echo "Qual será o percentual de reajuste? ($perc%)"
-                ?>
-                </label>
+            <input type="number" name="preco" id="" step="0.001" value="<?=$preco?>">
+            <label for="percentual"> Qual será meu percentual de reajuste </label>
             <input type="range" name="percentual" min="0" max="100" value="50">
             <input type="submit" value="Reajustar">
 
@@ -27,12 +26,11 @@
     <section>
         <h2>Reasultado do Reajuste</h2>
         <?php 
-        $preco = (int) $_GET["preco"] ?? 0;
-        $percentual = (int) $_GET["percentual"] ?? 0;
+        
         $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
-        $novo = $percentual * 0.01 * $preco + $preco;
+        $novo = $perc * 0.01 * $preco + $preco;
 
-        echo "O produto que custava " . numfmt_format_currency($padrao, $preco, "BRL") . ", com <strong>$percentual% de aumento</strong> vai passar a custar<strong> " . numfmt_format_currency($padrao, $novo, "BRL") . " </strong>a partir de agora.";
+        echo "O produto que custava " . numfmt_format_currency($padrao, $preco, "BRL") . ", com <strong>$perc% de aumento</strong> vai passar a custar<strong> " . numfmt_format_currency($padrao, $novo, "BRL") . " </strong>a partir de agora.";
         
         ?>
     </section>

@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php 
+        $seg = $_POST['seg'] ?? 0;
+    ?>
     <main>
         <h1>Calculadora de Tempo</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <label for="seg">Qual é o total de segundos?</label>
-            <input type="number" name="seg" id="">
+            <input type="number" name="seg" id="" required>
             <input type="submit" value="Calcular">
         </form>
     </main>
@@ -20,7 +23,7 @@
     <section>
         <h2>Totalizando tudo</h2>
         <?php 
-        $seg = (int) $_POST["seg"] ?? 0;
+        
         $min = $seg / 60;
         $hor = $min / 60;
         $dia = $hor / 24;

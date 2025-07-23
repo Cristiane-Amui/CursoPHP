@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php 
+        $valor = $_POST['valor'] ?? 0;
+    ?>
     <main>
         <h1>Caixa eletrônico</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <label for="valor">Qual valor você deseja sacar? (R$)*</label>
-            <input type="number" name="valor" id="" step="5">
+            <input type="number" name="valor" id="" step="5" value="<?=$valor?>">
             <p>*Notas disponíveis: R$100, R$50, R$10 e R$5</p>
             <input type="submit" value="Sacar">
         </form>
@@ -20,7 +23,7 @@
     <section>
         <h2>Saque de R$X realizado</h2>
         <?php 
-        $valor = (int) $_POST["valor"] ?? 0;
+        
         $pri = intdiv($valor, 100);
         $resto1 = $valor % 100;
         $seg = intdiv($resto1, 50);

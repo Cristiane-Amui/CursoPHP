@@ -17,11 +17,11 @@
         <h1>Calculando a sua idade</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="nasc">Em que ano você nasceu?</label>
-            <input type="number" name="nasc" id="" value="<?=$nasc?>">
+            <input type="number" name="nasc" id="" value="<?=$nasc?>" required>
             <label for="fut"><?php 
             echo "Quer saber sua idade em que ano? (atualmente estamos em $data)"
             ?> </label>
-            <input type="number" name="fut" id="" value="<?=$fut?>">
+            <input type="number" name="fut" id="" value="<?=$fut?>" required>
             <input type="submit" value="Qual será minha idade?">
         </form>
     </main>
