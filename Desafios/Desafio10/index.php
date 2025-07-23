@@ -17,19 +17,18 @@
         <h1>Calculando a sua idade</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="nasc">Em que ano você nasceu?</label>
-            <input type="number" name="nasc" id="">
+            <input type="number" name="nasc" id="" value="<?=$nasc?>">
             <label for="fut"><?php 
             echo "Quer saber sua idade em que ano? (atualmente estamos em $data)"
             ?> </label>
-            <input type="number" name="fut" id="">
+            <input type="number" name="fut" id="" value="<?=$fut?>">
             <input type="submit" value="Qual será minha idade?">
         </form>
     </main>
     <section>
         <h2>Resultado</h2>
         <?php 
-            $nasc = (int) $_GET['nasc'] ?? 0;
-            $fut = (int) $_GET['fut'] ?? 0;
+
             $idade = $fut - $nasc;
 
             echo "Quem nasceu em $nasc vai ter<strong>  $idade anos </strong>em $fut!"
