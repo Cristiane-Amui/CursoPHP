@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php 
+        $nasc = $_GET['nasc'] ?? 0;
+        $fut = $_GET['fut'] ?? 0;
+        $data = date("Y");
+    ?>
     <main>
         <h1>Calculando a sua idade</h1>
-        <?php 
-            $data = date("Y");
-        ?>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="nasc">Em que ano você nasceu?</label>
             <input type="number" name="nasc" id="">
@@ -26,8 +28,8 @@
     <section>
         <h2>Resultado</h2>
         <?php 
-            $nasc = $_GET["nasc"] ?? '0';
-            $fut = $_GET["fut"] ?? 0;
+            $nasc = (int) $_GET['nasc'] ?? 0;
+            $fut = (int) $_GET['fut'] ?? 0;
             $idade = $fut - $nasc;
 
             echo "Quem nasceu em $nasc vai ter<strong>  $idade anos </strong>em $fut!"

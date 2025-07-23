@@ -8,27 +8,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php 
-        $val1 = $_GET['1val'] ?? 1;
-        $val2 = $_GET['2val'] ?? 1;
-        $pes1 = $_GET['1pes'] ?? 1;
-        $pes2 = $_GET['2pes'] ?? 1;
-    ?>
+    
     <main>
         <h1>Médias Aritméticas</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="1valor">1º Nota</label>
-            <input type="number" name="1val" id="id1val" step="0.0001" value="<?=$val1?>">
+            <input type="number" name="1val" id="id1val" step="0.0001" required value="<?=$val1?>">
             <label for="1peso">1º Peso</label>
-            <input type="number" name="1pes" id="" step="0.0001" value="<?=$pes1?>">
+            <input type="number" name="1pes" id="" step="0.0001" required value="<?=$pes1?>">
             <label for="2valor">2º Nota</label>
-            <input type="number" name="2val" id="id2val" step="0.0001" value="<?=$val2?>">
+            <input type="number" name="2val" id="id2val" step="0.0001" required value="<?=$val2?>">
             <label for="2peso">2º Peso</label>
-            <input type="number" name="2pes" id="" step="0.0001" value="<?=$pes2?>">
+            <input type="number" name="2pes" id="" step="0.0001" required value="<?=$pes2?>">
             <input type="submit" value="Calcular Médias">
         </form>
     </main>
     <section>
+        <?php 
+            $val1 = $_GET['1val'] ?? 1;
+            $val2 = $_GET['2val'] ?? 1;
+            $pes1 = $_GET['1pes'] ?? 1;
+            $pes2 = $_GET['2pes'] ?? 1;
+        ?>
         <h2>Cálculo das Médias</h2>
         <?php 
             
