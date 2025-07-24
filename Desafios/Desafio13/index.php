@@ -21,7 +21,7 @@
         </form>
     </main>
     <section>
-        <h2>Saque de R$X realizado</h2>
+        <h2>Saque de R$<?=number_format($valor, 2, ",", ".")?> realizado</h2>
         <?php 
         
         $pri = intdiv($valor, 100);

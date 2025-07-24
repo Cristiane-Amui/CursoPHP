@@ -38,11 +38,11 @@
         
 
         echo "Totalizando o valor digitado, <strong>" . number_format($seg, 0, ",", ".") . " segundos </strong>equivalem a um total de: ";
-        echo "<ul><li>" . number_format($sem, 0, ",", ".") . " Semanas</li>";
-        echo "<li>" . number_format($dia, 0, ",", ".") . " Dias</li>";
-        echo "<li>" . number_format($hor, 0, ",", ".") . " Horas</li>";
-        echo "<li>" . number_format($min, 0, ",", ".") . " Minutos</li>";
-        echo "<li>" . number_format($segn, 0, ",", ".") . " Segundos</li></ul>";
+        echo "<ul><li>$sem Semanas</li>";
+        echo "<li> $dia Dias</li>";
+        echo "<li> $hor Horas</li>";
+        echo "<li> $min Minutos</li>";
+        echo "<li> $segn Segundos</li></ul>";
 
         ?>
     </section>
