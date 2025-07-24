@@ -23,18 +23,26 @@
     <section>
         <h2>Totalizando tudo</h2>
         <?php 
+
+        $sem = intdiv($seg, 604800);
+        $sobra1 = $seg % 604800;
+        $dia = intdiv($sobra1, 86400);
+        $sobra2 = $sobra1 % 86400;
+        $hor = intdiv($sobra2, 3600);
+        $sobra3 = $sobra2 % 3600;
+        $min = intdiv($sobra3, 60);
+        $sobra4 = $sobra3 % 60;
+        $segn = $sobra4;
         
-        $min = $seg / 60;
-        $hor = $min / 60;
-        $dia = $hor / 24;
-        $sem = $dia / 7;
+        
+        
 
         echo "Totalizando o valor digitado, <strong>" . number_format($seg, 0, ",", ".") . " segundos </strong>equivalem a um total de: ";
         echo "<ul><li>" . number_format($sem, 0, ",", ".") . " Semanas</li>";
         echo "<li>" . number_format($dia, 0, ",", ".") . " Dias</li>";
         echo "<li>" . number_format($hor, 0, ",", ".") . " Horas</li>";
         echo "<li>" . number_format($min, 0, ",", ".") . " Minutos</li>";
-        echo "<li>" . number_format($seg, 0, ",", ".") . " Segundos</li></ul>";
+        echo "<li>" . number_format($segn, 0, ",", ".") . " Segundos</li></ul>";
 
         ?>
     </section>
