@@ -18,7 +18,7 @@
             <label for="preco">Preço do Produto (R$)</label>
             <input type="number" name="preco" id="preco" min="0.10" step="0.01" value="<?=$preco?>" required>
 
-            <label for="percentual"> Qual será meu percentual de reajuste? (<strong><span id="p">?</span>%</strong>) </label>
+            <label for="percentual"> Qual será meu percentual de reajuste? (<strong><span id="p">?</span>%</strong>)</label>
 
             <input type="range" name="percentual" id="percentual" min="0" max="100" step="1" oninput="mudaValor()" value="<?=$perc?>">
             
@@ -42,7 +42,7 @@
     <script>
         mudaValor()
         function mudaValor() {
-            p.innerText = reaj.value
+            p.innerText = percentual.value;
         }
     </script>
 </body>
