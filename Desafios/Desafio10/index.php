@@ -9,15 +9,15 @@
 </head>
 <body>
     <?php 
-        $nasc = $_GET['nasc'] ?? 0;
-        $fut = $_GET['fut'] ?? 0;
         $data = date("Y");
+        $nasc = $_GET['nasc'] ?? '2000';
+        $fut = $_GET['fut'] ?? $data;
     ?>
     <main>
         <h1>Calculando a sua idade</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
             <label for="nasc">Em que ano você nasceu?</label>
-            <input type="number" name="nasc" id="" value="<?=$nasc?>" required>
+            <input type="number" name="nasc" id="" value="<?=$nasc?>" required max="<?=$data?>">
             <label for="fut"><?php 
             echo "Quer saber sua idade em que ano? (atualmente estamos em $data)"
             ?> </label>
