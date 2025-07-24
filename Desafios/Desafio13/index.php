@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caixa eletrônico</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        img.nota {
+            height: 50px;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <?php 
@@ -14,9 +20,9 @@
     <main>
         <h1>Caixa eletrônico</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-            <label for="valor">Qual valor você deseja sacar? (R$)*</label>
+            <label for="valor">Qual valor você deseja sacar? (R$)<sup>*</sup></label>
             <input type="number" name="valor" id="" step="5" value="<?=$valor?>" required>
-            <p>*Notas disponíveis: R$100, R$50, R$10 e R$5</p>
+            <p style="font-size: 0.7em"><sup>*</sup>Notas disponíveis: R$100, R$50, R$10 e R$5</p>
             <input type="submit" value="Sacar">
         </form>
     </main>
@@ -32,13 +38,15 @@
         $resto3 = $valor % 10;
         $qua = intdiv($resto3, 5);
 
-
-        echo "O caixa eletrônico vai te entregar as seguintes notas:";
-        echo "<ul><li> R$100,00 x $pri</li>";
-        echo "<li> R$50,00 x $seg</li>";
-        echo "<li> R$10,00 x $ter</li>";
-        echo "<li> R$5,00 x $qua</li></ul>";
         ?>
+
+        <p>O caixa eletrônico vai te entregar as seguintes notas:</p>
+        <ul>
+            <li> <img src="imagens/100-reais.jpg" alt="Nota de 100" class="nota"> x <?=$pri?></li>
+            <li> <img src="imagens/50-reais.jpg" alt="Nota de 50" class="nota"> x <?=$seg?></li>
+            <li> <img src="imagens/10-reais.jpg" alt="Nota de 10" class="nota"> x <?=$ter?></li>
+            <li> <img src="imagens/5-reais.jpg" alt="Nota de 5" class="nota"> x <?=$qua?></li>
+        </ul>
         
 
 
