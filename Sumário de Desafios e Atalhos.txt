@@ -36,3 +36,6 @@ Comentário: CTRL + "k" + "c"
 
 6- Na área head - configurar a página para ser renderizada com o modo mais recente do navegador atual (instalado na máquina do usuário).
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+Menu expansivo - <input type="checkbox"
+Itens do menu - lista - <ul> </ul> e <nav> </nav>
