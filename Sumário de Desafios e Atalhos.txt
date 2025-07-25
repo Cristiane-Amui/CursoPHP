@@ -1,0 +1,38 @@
+Lista de Desafios
+
+01 - Antecessor e Sucessor de um número
+02 - Gerador de números aleatórios
+03 - Conversor de Moedas básico
+04 - Conversor de Moedas avançado
+05 - Parte inteira e fracionária de um número 
+06 - A anatomia de uma divisão
+07 - Salário mínimo
+08 - Raiz quadrada e raiz cúbica
+09 - Médias Aritméticas simples e ponderada
+10 - Calculando sua idade
+11 - Reajustador de Preços
+12 - Calculadora de tempo
+13 - Caixa eletrônico
+
+----------------------------------------------
+Atalhos
+
+1- Formulários locais
+<?=$\_SERVER\['PHP\_SELF']?>
+
+2- Formatar números
+ . number_format($quad, 3, ",", ".") .
+
+3- Definir padrão de moeda (R$)
+$padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+
+. numfmt_format_currency($padrao, $novo, "BRL") . " equivalem a " .
+
+4- Inserir códigos
+Para códigos em html: &#x
+
+5- Inserir comentários
+Comentário: CTRL + "k" + "c" 
+
+6- Na área head - configurar a página para ser renderizada com o modo mais recente do navegador atual (instalado na máquina do usuário).
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
